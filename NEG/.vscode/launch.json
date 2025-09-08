@@ -1,0 +1,14 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Spring Boot-NegApplication<NEG>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "com.proyecto.NEG.NegApplication",
+            "projectName": "NEG",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        }
+    ]
+}

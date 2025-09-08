@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+</head>
+<body>
+    <footer th:fragment="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>NEG</h3>
+                    <p>Tu tienda de confianza para todos tus productos favoritos</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Enlaces Rápidos</h4>
+                    <ul>
+                        <li><a th:href="@{/}">Inicio</a></li>
+                        <li><a th:href="@{/nuestros-productos}">Productos</a></li>
+                        <li><a th:href="@{/nosotros}">Nosotros</a></li>
+                        <li><a th:href="@{/productos/nuevo}"></a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contacto</h4>
+                    <p>📧 contacto@neg.com</p>
+                    <p>📞 (123) 456-7890</p>
+                    <p>🏠 Av. Principal #123, Ciudad</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 NEG - Todos los derechos reservados</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

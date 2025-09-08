@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Lista de Productos</title>
+    <a th:href="@{/}" style="color: black; text-decoration: none;">Inicio</a>
+</head>
+<body>
+    <h1>Lista de Productos</h1>
+
+    <a th:href="@{/productos/nuevo}">Agregar Nuevo Producto</a><br><br>
+    
+
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Nombre</th>
+                <th>Marca</th>
+                <th>Precio Venta</th>
+                <th>Stock</th>
+                <th>ganancia</th>
+                <th>total ganancia</th>
+                <th>Acciones</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr th:each="producto : ${productos}">
+                <td th:text="${producto.nombre}"></td>
+                <td th:text="${producto.marca}"></td>
+                <td th:text="${producto.precioVenta}"></td>
+                <td th:text="${producto.stock}"></td>
+                <td th:text="${producto.gananciaUnitaria}"></td>
+                <td th:text="${producto.totalGanancia}"></td>
+                <td>
+                    <a th:href="@{'/productos/editar/' + ${producto.id}}">Editar</a> |
+                    <a th:href="@{'/productos/eliminar/' + ${producto.id}}"
+                       onclick="return confirm('¿Estás seguro?');">Eliminar</a>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>

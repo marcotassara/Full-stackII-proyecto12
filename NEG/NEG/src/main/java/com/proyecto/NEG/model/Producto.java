@@ -1,0 +1,44 @@
+package com.proyecto.NEG.model;
+
+import jakarta.persistence.*;
+import lombok.Data;
+
+@Data
+@Entity
+@Table(name = "PRODUCTOS")
+public class Producto {
+    @Id
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "producto_seq")
+    @SequenceGenerator(name = "producto_seq", sequenceName = "PRODUCTO_SEQ", allocationSize = 1)
+    private Long id;
+    
+    @Column(name = "NOMBRE", nullable = false, length = 100)
+    private String nombre;
+    
+    @Column(name = "MARCA", length = 50)
+    private String marca;
+    
+    @Column(name = "DESCRIPCION", length = 500)
+    private String descripcion;
+    
+    @Column(name = "PRECIO_COMPRA", nullable = false)
+    private Double precioCompra;
+    
+    @Column(name = "PRECIO_VENTA", nullable = false)
+    private Double precioVenta;
+    
+    @Column(name = "STOCK", nullable = false)
+    private Integer stock;
+    
+    @Column(name = "CATEGORIA", length = 50)
+    private String categoria;
+    
+    @Column(name = "IMAGEN_URL", length = 300)
+    private String imagenUrl;
+    
+    @Column(name = "GANANCIA_UNITARIA")
+    private Double gananciaUnitaria;
+    
+    @Column(name = "TOTAL_GANANCIA")
+    private Double totalGanancia;
+}

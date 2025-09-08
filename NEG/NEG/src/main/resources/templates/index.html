@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>NEG - Inicio</title>
+</head>
+<body>
+    <!-- Header corregido -->
+    <div th:replace="~{fragments/header :: header}"></div>
+
+    <div style="padding: 2rem;">
+        <h1>¡Bienvenido a NEG!</h1>
+        <p>Tienda en línea funcionando correctamente ✅</p>
+        
+        <div style="margin-top: 2rem;">
+            <h2>Productos Destacados</h2>
+            <p>Próximamente: catálogo de productos</p>
+            <a th:href="@{/nuestros-productos}" style="display: inline-block; background: #3498db; color: white; padding: 10px 20px; text-decoration: none; border-radius: 5px;">
+                Ver todos los productos
+            </a>
+        </div>
+
+        <div style="margin-top: 2rem;">
+            <a href="/test">✅ Ver página de prueba</a>
+        </div>
+    </div>
+</body>
+</html>

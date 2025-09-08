@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Formulario Producto</title>
+</head>
+<body>
+    <h1 th:text="${producto.id != null} ? 'Editar Producto' : 'Nuevo Producto'"></h1>
+
+    <form th:action="@{/productos/guardar}" th:object="${producto}" method="post">
+        <input type="hidden" th:field="*{id}">
+
+        <label>Nombre:</label>
+        <input type="text" th:field="*{nombre}" required><br>
+
+        <label>Marca:</label>
+        <input type="text" th:field="*{marca}"><br>
+
+        <label>Descripción:</label>
+        <textarea th:field="*{descripcion}"></textarea><br>
+
+        <label>Precio Compra:</label>
+        <input type="number" step="0.01" th:field="*{precioCompra}" required oninput="calcularGanancias()" id="precioCompra"><br>
+
+        <label>Precio Venta:</label>
+        <input type="number" step="0.01" th:field="*{precioVenta}" required oninput="calcularGanancias()" id="precioVenta"><br>
+
+        <label>Stock:</label>
+        <input type="number" th:field="*{stock}" required oninput="calcularGanancias()" id="stock"><br>
+
+        <label>Ganancia Unitaria:</label>
+        <input type="number" step="0.01" id="gananciaUnitaria" readonly><br>
+
+        <label>Ganancia Total:</label>
+        <input type="number" step="0.01" id="totalGanancia" readonly><br>
+
+        <label>Categoría:</label>
+        <input type="text" th:field="*{categoria}"><br>
+
+        <label>Imagen URL:</label>
+        <input type="text" th:field="*{imagenUrl}"><br><br>
+
+        <button type="submit">Guardar Producto</button>
+    </form>
+
+    <br>
+    <a th:href="@{/productos}">Volver al listado</a>
+
+    <script src="/assets/js/main.js"></script>
+</body>
+</html>

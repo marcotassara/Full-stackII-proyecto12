@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Test Page - NEG</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        .success {
+            background-color: #d4edda;
+            color: #155724;
+            padding: 20px;
+            border-radius: 5px;
+            border: 1px solid #c3e6cb;
+        }
+        .info {
+            background-color: #d1ecf1;
+            color: #0c5460;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="success">
+        <h1>✅ TEST EXITOSO</h1>
+        <p>Thymeleaf está funcionando correctamente</p>
+    </div>
+
+    <div class="info">
+        <h3>Información del sistema:</h3>
+        <p th:text="'Hora del servidor: ' + ${#temporals.format(#temporals.createNow(), 'dd/MM/yyyy HH:mm:ss')}"></p>
+        <p th:text="'Mensaje del controlador: ' + ${mensaje}"></p>
+    </div>
+
+    <div>
+        <h3>Enlaces de prueba:</h3>
+        <ul>
+            <li><a th:href="@{/}">🏠 Página de inicio</a></li>
+            <li><a th:href="@{/nuestros-productos}">📦 Productos</a></li>
+            <li><a th:href="@{/nosotros}">👥 Nosotros</a></li>
+            <li><a th:href="@{/nuestra-tienda}">🏪 Nuestra tienda</a></li>
+            <li><a th:href="@{/acerca-de}">ℹ️ Acerca de</a></li>
+        </ul>
+    </div>
+
+    <div style="margin-top: 30px; padding: 15px; background: #f8f9fa; border-radius: 5px;">
+        <h4>🔍 Debug info:</h4>
+        <p>Template: <strong>test.html</strong></p>
+        <p>Ubicación: <strong>src/main/resources/templates/test.html</strong></p>
+        <p>Controller: <strong>HomeController.testPage()</strong></p>
+    </div>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Nuestros Productos</title>
+    <link rel="stylesheet" href="/assets/css/style.css" />
+</head>
+<body>
+    <h1>Nuestros Productos</h1>
+
+    <div class="productos-container">
+        <div th:each="producto : ${productos}" class="producto-card">
+            <img th:src="${producto.imagenUrl}" alt="Imagen producto" width="150">
+            <h2 th:text="${producto.nombre}"></h2>
+            <p th:text="'Marca: ' + ${producto.marca}"></p>
+            <p th:text="${producto.descripcion}"></p>
+            <p th:text="'Precio: $' + ${producto.precioVenta}"></p>
+            <p th:text="'Stock: ' + ${producto.stock}"></p>
+            
+        </div>
+    </div>
+</body>
+</html>

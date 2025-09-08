@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+</head>
+<body>
+    <header th:fragment="header">
+        <nav style="background: #2c3e50; color: white; padding: 1rem; display: flex; justify-content: space-between; align-items: center;">
+            <!-- Logo -->
+            <a th:href="@{/}" style="color: white; text-decoration: none; font-size: 1.5rem; font-weight: bold;">
+                <img th:src="@{/assets/img/tienda.png}" alt="NEG Logo" style="height: 40px; margin-right: 10px;">
+                NEG
+            </a>
+
+            <!-- Menú de navegación SIMPLIFICADO -->
+            <ul style="display: flex; list-style: none; gap: 2rem; margin: 0; padding: 0;">
+                <li><a th:href="@{/}" style="color: white; text-decoration: none;">Inicio</a></li>
+                <li><a th:href="@{/nuestros-productos}" style="color: white; text-decoration: none;">Productos</a></li>
+                <li><a th:href="@{/nuestra-tienda}" style="color: white; text-decoration: none;">Tienda</a></li>
+                <li><a th:href="@{/nosotros}" style="color: white; text-decoration: none;">Nosotros</a></li>
+                <li><a th:href="@{/acerca-de}" style="color: white; text-decoration: none;">Acerca de</a></li>
+                <li><a th:href="@{/productos/nuevo}" style="color: white; text-decoration: none;">Actualizar</a></li>
+                <li><a th:href="@{/productos}" style="color: white; text-decoration: none;">Form</a></li>
+            </ul>
+        </nav>
+    </header>
+</body>
+</html>
