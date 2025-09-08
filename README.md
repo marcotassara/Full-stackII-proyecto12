@@ -2,9 +2,9 @@
 
 # Proyecto Full-stack II
 
-¡Hola! Bienvenido al repositorio de mi proyecto full-stack. Este es un sistema de gestión de productos que me permite realizar un seguimiento de mi inventario, precios y ganancias.
+¡Hola! Bienvenido al repositorio de nuestro proyecto full-stack. Este es un sistema de gestión de productos que me permite realizar un seguimiento de mi inventario, precios y ganancias.
 
-Este proyecto es el resultado de mi aprendizaje y aplicación de tecnologías full-stack, conectando el backend de Java con un frontend dinámico.
+Este proyecto es el resultado de nuestro aprendizaje y aplicación de tecnologías full-stack, conectando el backend de Java con un frontend dinámico.
 
 ---
 
